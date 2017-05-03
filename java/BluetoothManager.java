@@ -218,7 +218,7 @@ public class BluetoothManager
             inst.init();
             String nativeAPIVersion = getNativeAPIVersion();
             String APIVersion = BluetoothManager.class.getPackage().getSpecificationVersion();
-            if (APIVersion.equals(nativeAPIVersion) == false) {
+            if (APIVersion != null && !APIVersion.equals(nativeAPIVersion)) {
                 String[] nativeAPIVersionCode = nativeAPIVersion.split("\\D");
                 String[] APIVersionCode = APIVersion.split("\\D");
                 if (APIVersionCode[0].equals(nativeAPIVersionCode[0]) == false) {
